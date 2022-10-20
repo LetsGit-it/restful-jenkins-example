@@ -13,9 +13,6 @@ public class PlayerController {
         return RestfulJenkinsExampleApplication.PlayerHm;
     }
 
-    /**
-     * GET use id
-     */
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     public Player getPlayers(@PathVariable("id") final long id) throws Exception {
 
@@ -30,9 +27,6 @@ public class PlayerController {
         return player;
     }
 
-    /**
-     * POST
-     */
     @RequestMapping(value = "/", method = RequestMethod.POST)
     public HashMap<Long, Player> addPlayer(@RequestBody final Player player) throws Exception {
 
@@ -50,9 +44,6 @@ public class PlayerController {
         return RestfulJenkinsExampleApplication.PlayerHm;
     }
 
-    /**
-     * PUT
-     */
     @RequestMapping(value = "/{id}", method = RequestMethod.PUT)
     public Player udpatePlayer(@PathVariable("id") final long id, @RequestBody final Player player) throws Exception {
 
@@ -66,9 +57,6 @@ public class PlayerController {
         return player;
     }
 
-    /**
-     * DELETE
-     */
     @RequestMapping(value = "/{id}", method = RequestMethod.DELETE)
     public HashMap<Long, Player> deletePlayer(@PathVariable("id") final long id, @RequestBody final Player player) throws Exception {
 
@@ -77,9 +65,6 @@ public class PlayerController {
         } else {
             throw new Exception("Player " + player.getId() + " does not exists");
         }
-
         return RestfulJenkinsExampleApplication.PlayerHm;
     }
-
-
 }

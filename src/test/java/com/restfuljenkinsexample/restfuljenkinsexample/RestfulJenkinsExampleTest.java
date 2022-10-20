@@ -35,7 +35,6 @@ public class RestfulJenkinsExampleTest {
 
     @BeforeAll
     static void beforeAll() {
-
     }
 
     @BeforeEach
